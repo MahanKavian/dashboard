@@ -64,14 +64,14 @@ export default function PieChartCustom({ percentage } : Props) {
                     <Legend content={PiChartLegend}/>
                 </PieChart>
                 <div
-                    className={"absolute text-3xl font-semibold text-dark-100 top-[52%] left-[50%] -translate-1/2"}
+                    className={"absolute text-3xl font-semibold text-dark-100 top-[52%] xl:top-[49%] left-[50%] -translate-1/2"}
                     style={{
                         transform: 'translate(-50%, -50%)',
                     }}
                 >
                     {percentage}%
                 </div>
-                <div className={"w-[190px] justify-between mx-auto text-xs font-semibold text-dark-100-100 bottom-[120px] absolute flex items-center"}>
+                <div className={"w-[190px] justify-between mx-auto text-xs font-semibold text-dark-100-100 bottom-[120px] xl:bottom-[135px] absolute flex items-center"}>
                     <div className={"text-center"}>0</div>
                     <div className={"text-center"}>100</div>
                 </div>
