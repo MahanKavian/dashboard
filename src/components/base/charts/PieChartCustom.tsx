@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {PieChart, Pie, Cell, Legend} from 'recharts';
+import {ChartHeader} from "@/components/base/charts/ChartHeader";
 
 interface Props {
     percentage: number;
@@ -41,13 +42,9 @@ export default function PieChartCustom({ percentage } : Props) {
 
     return (
         isClient &&
-            <div className={"flex flex-col items-center gap-5"}>
-                <div className={"flex gap-10 text-sm"}>
-                    <div className={"text-dark-100 font-semibold pb-1 border-b-2 border-lightBlue"}>7 days</div>
-                    <div className={"text-neutral-100 font-semibold pb-1 border-b-2 border-transparent"}>30 days</div>
-                    <div className={"text-neutral-100 font-semibold pb-1 border-b-2 border-transparent"}>60 days</div>
-                </div>
-                <PieChart width={150} height={190}>
+            <div className={"flex flex-col items-center relative gap-5"}>
+                <ChartHeader/>
+                <PieChart width={150} height={250}>
                     <Pie
                         data={data}
                         cx="50%"
@@ -57,6 +54,7 @@ export default function PieChartCustom({ percentage } : Props) {
                         startAngle={180}
                         endAngle={0}
                         paddingAngle={2}
+                        isAnimationActive={false}
                         dataKey="value"
                     >
                         {data.map((entry:PieChartData, index: number) => (
@@ -66,14 +64,14 @@ export default function PieChartCustom({ percentage } : Props) {
                     <Legend content={PiChartLegend}/>
                 </PieChart>
                 <div
-                    className={"absolute text-3xl font-semibold text-dark-100 top-[60%] left-[50%] -translate-1/2"}
+                    className={"absolute text-3xl font-semibold text-dark-100 top-[52%] left-[50%] -translate-1/2"}
                     style={{
                         transform: 'translate(-50%, -50%)',
                     }}
                 >
                     {percentage}%
                 </div>
-                <div className={"w-[190px] justify-between mx-auto text-xs font-semibold text-dark-100-100 bottom-[170px] absolute flex items-center"}>
+                <div className={"w-[190px] justify-between mx-auto text-xs font-semibold text-dark-100-100 bottom-[120px] absolute flex items-center"}>
                     <div className={"text-center"}>0</div>
                     <div className={"text-center"}>100</div>
                 </div>

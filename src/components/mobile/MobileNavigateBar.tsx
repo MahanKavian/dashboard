@@ -1,4 +1,4 @@
-import {IconBox} from "@/components/base/IconBox";
+import {IconBox} from "@/components/base/ui/IconBox";
 import {
     calendarIcon,
     chatIcon,

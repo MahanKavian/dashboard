@@ -8,7 +8,7 @@ interface Props {
 
 export function MobileApp({}: Props) {
     return (
-        <div className={"relative pb-10"}>
+        <div className={"relative lg:hidden pb-10"}>
             <>
                 <MobileNavbar/>
             </>

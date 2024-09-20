@@ -1,4 +1,4 @@
-import {menuIcon} from "../../../public/assets/icons/icons";
+import {menuIcon} from "../../../../public/assets/icons/icons";
 import {ReactNode} from "react";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 
 export function ChartBox({chartName, chart}: Props) {
     return (
-        <div className={"rounded-md border grid grid-cols-1 p-3"}>
+        <div className={"rounded-lg shadow border grid grid-cols-1 p-3"}>
             <div className={"w-full justify-between flex items-center mb-6"}>
                 <div className={"flex flex-col gap-1"}>
                     <span className={"capitalize text-dark-100 font-semibold text-sm"}>

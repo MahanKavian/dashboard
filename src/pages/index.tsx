@@ -1,4 +1,5 @@
 import {MobileApp} from "@/components/mobile/MobileApp";
+import {DesktopApp} from "@/components/desktop/DesktopApp";
 
 
 export default function Home() {
@@ -7,6 +8,9 @@ export default function Home() {
       {/*MOBILE*/}
         <>
             <MobileApp/>
+        </>
+        <>
+            <DesktopApp/>
         </>
     </>
   );
